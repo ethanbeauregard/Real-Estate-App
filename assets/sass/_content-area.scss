@@ -1,9 +1,11 @@
 #filter {
  background: $grey;
  width: 30%;
+ max-width: 300px;
 
  .inside {
   padding: 20px;
+  max-width: 300px;
  }
 
  h4 {
@@ -20,7 +22,7 @@
   font-weight: 500;
   color: #1b1b1b;
   display: block;
-  opacity: .4;
+  opacity: .6;
   border-radius: 5px;
   margin-bottom: 25px;
   width: 100%;
@@ -32,15 +34,35 @@
   font-size: .9rem;
   display: block;
   margin-bottom: 1rem;
+  color: $darkgrey;
+  letter-spacing: 1px;
  }
 
  input[type="text"] {
   width: 45%;
+  font-size: 1rem;
   margin-right: 2.5%;
   display: inline-block;
   margin-bottom: 1rem;
   border-radius: 5px;
-  padding: 4px;
+  padding: .4rem;
   opacity: .8;
  }
+
+ &.extras {
+  label {
+   display: block;
+   width: 100%;
+   padding: 14px 0;
+   border-bottom: 1px solid $darkgrey;
+
+   input[type="checkbox"] {
+    float: right;
+   }
+  }
+ }
+}
+
+#listings {
+ 
 }

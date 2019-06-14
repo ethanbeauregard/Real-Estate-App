@@ -87,8 +87,8 @@ var Filter = function (_Component) {
               { className: 'title' },
               'Price'
             ),
-            _react2.default.createElement('input', { type: 'text', name: 'min-price', className: 'min-price' }),
-            _react2.default.createElement('input', { type: 'text', name: 'max-price', className: 'max-price' })
+            _react2.default.createElement('input', { type: 'text', name: 'min-price', className: 'min-price', placeholder: 'min' }),
+            _react2.default.createElement('input', { type: 'text', name: 'max-price', className: 'max-price', placeholder: 'max' })
           ),
           _react2.default.createElement(
             'div',
@@ -98,12 +98,17 @@ var Filter = function (_Component) {
               { className: 'title' },
               'Floor Space'
             ),
-            _react2.default.createElement('input', { type: 'text', name: 'min-floor-space', className: 'min-floor-space' }),
-            _react2.default.createElement('input', { type: 'text', name: 'max-floor-space', className: 'max-floor-space' })
+            _react2.default.createElement('input', { type: 'text', name: 'min-floor-space', className: 'min-floor-space', placeholder: 'min' }),
+            _react2.default.createElement('input', { type: 'text', name: 'max-floor-space', className: 'max-floor-space', placeholder: 'max' })
           ),
           _react2.default.createElement(
             'div',
             { className: 'filters extras' },
+            _react2.default.createElement(
+              'span',
+              { className: 'title' },
+              'Facilities'
+            ),
             _react2.default.createElement(
               'label',
               { 'for': 'extras' },
@@ -112,7 +117,7 @@ var Filter = function (_Component) {
                 null,
                 'Elevators'
               ),
-              _react2.default.createElement('input', { type: 'checkbox', value: 'swimming-pool', name: 'extras' })
+              _react2.default.createElement('input', { type: 'checkbox', value: 'swimming-pool', name: 'extras', checked: 'checked' })
             ),
             _react2.default.createElement(
               'label',
@@ -122,7 +127,7 @@ var Filter = function (_Component) {
                 null,
                 'Swimming Pool'
               ),
-              _react2.default.createElement('input', { type: 'checkbox', value: 'elevator', name: 'extras' })
+              _react2.default.createElement('input', { type: 'checkbox', value: 'elevator', name: 'extras', checked: 'checked' })
             ),
             _react2.default.createElement(
               'label',
@@ -132,7 +137,7 @@ var Filter = function (_Component) {
                 null,
                 'Elevators'
               ),
-              _react2.default.createElement('input', { type: 'checkbox', value: 'Elevator', name: 'extras' })
+              _react2.default.createElement('input', { type: 'checkbox', value: 'Elevator', name: 'extras', checked: 'checked' })
             ),
             _react2.default.createElement(
               'label',
@@ -142,7 +147,7 @@ var Filter = function (_Component) {
                 null,
                 'Finished Basement'
               ),
-              _react2.default.createElement('input', { type: 'checkbox', value: 'finished-basement', name: 'extras' })
+              _react2.default.createElement('input', { type: 'checkbox', value: 'finished-basement', name: 'extras', checked: 'checked' })
             ),
             _react2.default.createElement(
               'label',
@@ -152,7 +157,7 @@ var Filter = function (_Component) {
                 null,
                 'Gym'
               ),
-              _react2.default.createElement('input', { type: 'checkbox', value: 'gym', name: 'extras' })
+              _react2.default.createElement('input', { type: 'checkbox', value: 'gym', name: 'extras', checked: 'checked' })
             )
           )
         )
@@ -295,7 +300,40 @@ var Listings = function (_Component) {
       return _react2.default.createElement(
         'section',
         { className: 'listings' },
-        'Listings'
+        _react2.default.createElement(
+          'section',
+          { className: 'search-area' },
+          _react2.default.createElement('input', { type: 'text', name: 'search' })
+        ),
+        _react2.default.createElement(
+          'section',
+          { className: 'sortby-area' },
+          _react2.default.createElement(
+            'div',
+            null,
+            '390 results found'
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'sort-options' },
+            _react2.default.createElement(
+              'select',
+              { className: 'sortby', name: 'sortby' },
+              _react2.default.createElement(
+                'options',
+                { value: 'price-asc' },
+                'Highest Price'
+              ),
+              _react2.default.createElement(
+                'options',
+                { value: 'price-dsc' },
+                'Lowest Price'
+              )
+            )
+          )
+        ),
+        _react2.default.createElement('section', { className: 'listings-results' }),
+        _react2.default.createElement('section', { className: 'pagination' })
       );
     }
   }]);
