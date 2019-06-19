@@ -1,0 +1,58 @@
+[33mcommit ca9f5723e3ea692c46bfe26c3fe4b7cc42b9ebaa[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: ethanbeauregard <ethantbeauregard@gmail.com>
+Date:   Mon Jun 17 08:47:01 2019 -0400
+
+    Finshed UI for main front page
+
+[33mcommit b751cdb5ea6f064893430d033d6f0d5d662abc62[m
+Author: ethanbeauregard <ethantbeauregard@gmail.com>
+Date:   Sun Jun 16 09:23:09 2019 -0400
+
+    Started styling the sortby section for listing-area
+
+[33mcommit e09e9854597be60b03e5683d7742ecf01bb0200c[m
+Author: ethanbeauregard <ethantbeauregard@gmail.com>
+Date:   Fri Jun 14 10:52:25 2019 -0400
+
+    added couple of features in the filter section
+
+[33mcommit 5cf6cbafc3c844f602b6cf7e4efeff3b3a816cbf[m
+Merge: a85ca31 673e304
+Author: ethanbeauregard <ethantbeauregard@gmail.com>
+Date:   Wed Jun 12 19:57:08 2019 -0400
+
+    Merge branch 'master' of https://github.com/ethanbeauregard/Real-Estate-App
+
+[33mcommit a85ca310a4b55412878697ebf6dfc64e5d7cad8f[m
+Author: ethanbeauregard <ethantbeauregard@gmail.com>
+Date:   Wed Jun 12 19:56:48 2019 -0400
+
+    added header and options for filter area
+
+[33mcommit 673e3042174da047760a59e336b9489092d40b3a[m
+Author: Ethan Beauregard <EthanTBeauregard@gmail.com>
+Date:   Sat Jun 8 14:27:34 2019 -0400
+
+    Delete LICENSE
+    
+    License deleted
+
+[33mcommit d7ab18278c78eb16e7e542f80f44e93cf3485351[m
+Author: Ethan Beauregard <EthanTBeauregard@gmail.com>
+Date:   Fri Jun 7 08:55:31 2019 -0400
+
+    Update README.md
+    
+    Updated README.md
+
+[33mcommit ab2a2c5af5eaf996ae6b351bfc53ddf44819079f[m
+Author: ethanbeauregard <ethantbeauregard@gmail.com>
+Date:   Fri Jun 7 08:49:32 2019 -0400
+
+    made first react component
+
+[33mcommit 0b0a7d2fe90cb29304f86aed888f750239e730e8[m
+Author: Ethan Beauregard <EthanTBeauregard@gmail.com>
+Date:   Fri Jun 7 08:47:09 2019 -0400
+
+    Initial commit

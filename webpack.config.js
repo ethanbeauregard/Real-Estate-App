@@ -1,7 +1,7 @@
 
 const path = require('path');
 const webpack = require('webpack')
-
+process.traceDeprecation = true;
 const VENDOR_LIBS = [
   'babel-polyfill', 'redux', 'react-redux', 'react-dom'
 ]
