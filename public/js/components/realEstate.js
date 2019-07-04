@@ -39,6 +39,24 @@ var Filter = function (_Component) {
   }
 
   _createClass(Filter, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      this.props.populateAction();
+    }
+  }, {
+    key: 'cities',
+    value: function cities() {
+      var populateFormsData = this.props.globalState.populateFormsData;
+
+      return populateFormsData.map(function (item) {});
+    }
+  }, {
+    key: 'houseTypes',
+    value: function houseTypes() {}
+  }, {
+    key: 'bedrooms',
+    value: function bedrooms() {}
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -728,7 +746,8 @@ var App = function (_Component) {
       Gym: false,
       Swimming_Pool: false,
       Tennis_Court: false,
-      filteredData: _listingsData2.default
+      filteredData: _listingsData2.default,
+      populateFormsData: ''
     };
     _this.change = _this.change.bind(_this);
     _this.filteredData = _this.filteredData.bind(_this);
@@ -777,6 +796,8 @@ var App = function (_Component) {
   }, {
     key: 'populateForms',
     value: function populateForms() {
+      var _this4 = this;
+
       //city
       var cities = this.state.listingsData.map(function (item) {
         return item.city;
@@ -784,17 +805,29 @@ var App = function (_Component) {
       cities = new Set(cities);
       cities = [].concat(_toConsumableArray(cities));
 
-      //house type
-      var cities = this.state.listingsData.map(function (item) {
-        return item.city;
+      //houseType
+      var houseTypes = this.state.listingsData.map(function (item) {
+        return item.houseType;
       });
-      cities = new Set(cities);
+      houseTypes = new Set(houseTypes);
+      houseTypes = [].concat(_toConsumableArray(houseTypes));
 
       //bedrooms
-      var cities = this.state.listingsData.map(function (item) {
-        return item.city;
+      var bedrooms = this.state.listingsData.map(function (item) {
+        return item.bedrooms;
       });
-      cities = new Set(cities);
+      bedrooms = new Set(bedrooms);
+      bedrooms = [].concat(_toConsumableArray(bedrooms));
+
+      this.setState({
+        populateFormsData: {
+          cities: cities,
+          houseTypes: houseTypes,
+          bedrooms: bedrooms
+        }
+      }, function () {
+        console.log(_this4.state);
+      });
     }
   }, {
     key: 'render',
@@ -806,7 +839,7 @@ var App = function (_Component) {
         _react2.default.createElement(
           'section',
           { id: 'content-area' },
-          _react2.default.createElement(_Filter2.default, { change: this.change, globalState: this.state }),
+          _react2.default.createElement(_Filter2.default, { change: this.change, globalState: this.state, populateAction: this.populateForms }),
           _react2.default.createElement(_Listings2.default, { listingsData: this.state.filteredData })
         )
       );

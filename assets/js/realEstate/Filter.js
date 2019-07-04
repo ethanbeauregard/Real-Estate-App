@@ -1,4 +1,4 @@
-import React, { Component} from 'react'
+import React, { Component } from 'react'
 
 export default class Filter extends Component {
  constructor () {
@@ -6,6 +6,25 @@ export default class Filter extends Component {
    this.state = {
     name: 'Ethan'
    }
+  }
+
+  componentWillMount() {
+    this.props.populateAction()
+  }
+
+  cities() {
+    var { populateFormsData } = this.props.globalState
+    return populateFormsData.map((item) => {
+
+    })
+  }
+
+  houseTypes() {
+    
+  }
+
+  bedrooms() {
+    
   }
 
   render () {
